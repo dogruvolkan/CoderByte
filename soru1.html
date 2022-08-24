@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var strArr = ["100","000"]
+        
+        function BitwiseOne(strArr){
+
+            var ilkSayi = strArr[0];
+            var sonSayi = strArr[1];
+            var ilkDizi = ilkSayi.split("")
+            var sonDizi =sonSayi.split("")
+            console.log(ilkDizi);
+            console.log(sonDizi);
+            strArr.pop();
+            strArr.shift();
+            console.log(strArr);
+            for(var i=0 ; i<ilkDizi.length ; i++){
+               
+                if(ilkDizi[i]== "0" && sonDizi[i]=="0"){
+                    strArr.push(0)    
+                    console.log(strArr)    
+                }
+                else{
+                    strArr.push(1)    
+                    console.log(strArr)        
+                }
+                
+            }
+            return strArr.join();
+        }
+       BitwiseOne(strArr)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
